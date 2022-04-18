@@ -1,0 +1,10 @@
+Getting storybook to run in svelte
+	Rename main and preview to be main.cjs and preview.cjs. 
+	Remove in the main.cjs the mention of svelte.config.js, and it should work (at least, it works on my env)
+
+	npm run storybook
+		http://localhost:6006/?path=/story/example-introduction--page
+
+Running dev
+	npm run dev -- --open
+		http://localhost:3000/

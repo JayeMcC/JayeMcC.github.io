@@ -1,0 +1,11 @@
+Create basic mobile first UI
+Build each component
+    Button
+    Image frame
+    Title frame
+
+Style constants?
+
+Links
+    https://svelte.dev/tutorial/basics
+    https://kit.svelte.dev/docs/introduction
