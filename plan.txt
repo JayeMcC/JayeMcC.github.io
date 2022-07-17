@@ -49,6 +49,9 @@ Backend
   
 Frontend
 - How do I serve a JS SPA from laravel?
+  - Create API on backend
+  - Consume API on frontend
+  - Two separate repos
 
 Notes
   - To edit ubuntu root files in windows:
