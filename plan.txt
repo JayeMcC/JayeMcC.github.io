@@ -24,6 +24,16 @@ Backend
     - `sudo apt install sqlite3`
   - https://stackoverflow.com/questions/63797381/is-there-a-way-to-explore-a-sqlite-db-visually-gui-via-wsl2
   
+ - DB GUI
+   - TablePlus
+     - Default mysql settings
+       - DB_CONNECTION=mysql
+       - DB_HOST=mysql
+       - DB_PORT=3306
+       - DB_DATABASE=dotadatasite
+       - DB_USERNAME=sail
+       - DB_PASSWORD=password
+  
   DOTA API
   
   Frontend
