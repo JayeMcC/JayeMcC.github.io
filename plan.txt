@@ -1,6 +1,6 @@
 Dotasite plan
 
-Backend
+Setup
 - WSL2
   - Ubuntu image
 - Docker
@@ -9,31 +9,50 @@ Backend
       -`Use the WSL 2 based engine`
       - https://stackoverflow.com/questions/61592709/docker-not-running-on-ubuntu-wsl-due-to-error-cannot-connect-to-the-docker-daemo
         - make sure wsl is default distro for docker
+
+DB
+- MySQL (this via docker image)
+  - `sudo apt install mysql-server`
+  - Can't install normally on WSL as run levels aren't supported
+    - `https://github.com/microsoft/WSL/issues/1761`
+  - might be fine via docker package
+- SQLite (ignore)
+  - https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database
+    - `sudo apt install sqlite3`
+  - https://stackoverflow.com/questions/63797381/is-there-a-way-to-explore-a-sqlite-db-visually-gui-via-wsl2
+
+- DB GUI
+ - TablePlus
+  - Default mysql settings
+    - DB_CONNECTION=mysql
+    - DB_HOST=mysql
+    - DB_PORT=3306
+    - DB_DATABASE=dotadatasite
+    - DB_USERNAME=sail
+   - DB_PASSWORD=password
+
+Backend
 - Laravel/PHP/Composer package
   - `https://laravel.com/docs/9.x#getting-started-on-windows`
   - `curl -s https://laravel.build/example-app | bash`
   - `cd example-app && ./vendor/bin/sail up`
   - `http://localhost/`
-- MySQL
-  - `sudo apt install mysql-server`
-  - Can't install normally on WSL as run levels aren't supported
-    - `https://github.com/microsoft/WSL/issues/1761`
-  - might be fine via docker package
-- SQLite
-  - https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database
-    - `sudo apt install sqlite3`
-  - https://stackoverflow.com/questions/63797381/is-there-a-way-to-explore-a-sqlite-db-visually-gui-via-wsl2
   
- - DB GUI
-   - TablePlus
-     - Default mysql settings
-       - DB_CONNECTION=mysql
-       - DB_HOST=mysql
-       - DB_PORT=3306
-       - DB_DATABASE=dotadatasite
-       - DB_USERNAME=sail
-       - DB_PASSWORD=password
+- PHP
+  - `sudo add-apt-repository ppa:ondrej/php`
+  - `sudo apt-get update`
+  - `sudo apt-get install php`
+  - `sudo apt-get install php-curl`
+  - in root of project
+    - `composer update`
+    - `composer install`
   
-  DOTA API
-  
-  Frontend
+Frontend
+- How do I serve a JS SPA from laravel?
+
+Notes
+  - To edit ubuntu root files in windows:
+    - `sudo nano /etc/php/$version/php.ini`
+    - `sudo chown myuser /path/to/file`
+    - edit file via vscode
+    - `sudo chown root /path/to/file`
