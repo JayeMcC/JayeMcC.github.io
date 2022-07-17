@@ -1,11 +1,16 @@
-Create basic mobile first UI
-Build each component
-    Button
-    Image frame
-    Title frame
+Dotasite plan
 
-Style constants?
-
-Links
-    https://svelte.dev/tutorial/basics
-    https://kit.svelte.dev/docs/introduction
+Backend
+- WSL2
+  - Ubuntu image
+- Docker
+  - Settings
+    - General
+      -`Use the WSL 2 based engine`
+- Laravel
+  - `https://laravel.com/docs/9.x#getting-started-on-windows`
+  - `curl -s https://laravel.build/example-app | bash`
+  - `cd example-app && ./vendor/bin/sail up`
+  - `http://localhost/`
+- PHP
+- Composer
